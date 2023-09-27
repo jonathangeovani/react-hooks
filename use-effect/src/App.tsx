@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+console.log(
+  "useEffect -> recebe uma função que será executada assim que o component é renderizado (on mount), e uma lista de valores, que executarão a função novamente se um deles for alterado.\n\n-> o retorno é usado para limpar o useEffect (unmount) antes de executá-lo novamente. Ex.: desconectar-se de uma api antes de fazer a requisição (que se conectaria novamente)"
+);
+
 export default function App() {
   const [resourceType, setResourceType] = useState(() => {
     return "posts";
